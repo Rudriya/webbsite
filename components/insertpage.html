@@ -1,0 +1,82 @@
+<!-- Page 1 HTML -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page 1</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f9f9f9;
+        }
+
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-container h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-container label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+
+        .form-container input[type="text"],
+        .form-container textarea,
+        .form-container input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-container button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .form-container button:hover {
+            background-color: #0056b3;
+        }
+
+        .form-container button:active {
+            background-color: #003f7f;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Submit Your Details</h1>
+        <form action="upload.php" method="POST" enctype="multipart/form-data">
+            <label for="heading">Heading:</label>
+            <input type="text" id="heading" name="heading" required>
+
+            <label for="body">Body:</label>
+            <textarea id="body" name="body" rows="5" required></textarea>
+
+            <label for="file">Upload Document (PDF/DOC):</label>
+            <input type="file" id="file" name="file" accept=".pdf, .doc, .docx" required>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
